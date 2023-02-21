@@ -17,14 +17,13 @@ key = os.environ.get('FORECAST_API_KEY')
 print(key)
 
 # Link from OpenWeatherMap.org \for 5 days with data every 3 hours by city name.
-"""
-1: request to the OpenWeatherMap API.
-2: The query has the parameters that will be sent along with the request.
-3: The parameter include name of city , units of measurement and the API KEY.
-4: The requests.get function is used to send an HTTP GET request to the API.
-5: jSON data is stored in the 'data' variable.
 
-"""
+# 1: request to the OpenWeatherMap API.
+# 2: The query has the parameters that will be sent along with the request.
+# 3: The parameter include name of city , units of measurement and the API KEY.
+# 4: The requests.get function is used to send an HTTP GET request to the API.
+# 5: jSON data is stored in the 'data' variable.
+
 
 url = 'https://api.openweathermap.org/data/2.5/forecast'   
 query = {'q': 'minneapolis,us' , 'units': 'imperial', 'appid':key}
