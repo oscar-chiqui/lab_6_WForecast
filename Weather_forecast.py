@@ -65,6 +65,15 @@ def get_location():
     return location
 
 
+# get_current_weather; Is called with the location and the API key parameters from OpenWeatherMap.
+# API query using the requests library and returns yhe JSON data from the API.
+# The function try: is used to make the API call and retrieve the data.
+# The JSON data is returned along with a None error message.
+
+# The except block catches any exception that may ocurred and logs the exception 
+# message using the 'logging.debut' function.
+
+# The function return None along with the exception object( print detailed error information)
 
 def get_current_weather(location , key):
     try:
@@ -78,6 +87,15 @@ def get_current_weather(location , key):
         logging.debug(response.text)
         print(response.text)
         return None, ex
+    
+# get_temp function retrieves the temperature, date, weather description and wind speed in the forecast.
+# The key list; if the key is not present in the dictionary , the function prints a message and return 'Unknown;.
+# if the key is present the program use a for loop.
+# Wind keys in the forecast dictionary (the temperature,timestamp, and wind speed)
+# The element of the Weather list in the forecast dictionary.
+# Convert the date format using the datetime.fromtimestamp method
+# print everything on a formatted table.
+
 
 def get_temp(weather_data):
     try:
@@ -97,7 +115,10 @@ def get_temp(weather_data):
         print('Sorry, no weather data')
         return 'Unknown'
     
+
+    
 if __name__ == '__main__':
     # The program run, it should only print - user-friendly messages.
     logging.info(f'thanks,we get the weather') 
     main()
+    
