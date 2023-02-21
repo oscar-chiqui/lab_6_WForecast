@@ -1,5 +1,4 @@
 from datetime import datetime
-from distutils.log import error
 import requests
 import os
 
@@ -121,4 +120,3 @@ if __name__ == '__main__':
     # The program run, it should only print - user-friendly messages.
     logging.info(f'thanks,we get the weather') 
     main()
-    
