@@ -3,4 +3,5 @@ env
 __pycache__
 .vscode
 .idea
-app.log
+# ignore all logs
+*.log
